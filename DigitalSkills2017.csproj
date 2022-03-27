@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{82AEB999-84BF-43BF-9A69-E1C3EB4D4E41}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DigitalSkills2017</RootNamespace>
+    <AssemblyName>DigitalSkills2017</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Forms\AmentitiesForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\BookTicketsForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\ChangeRoleForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\ConfirmBooking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\CrasheReportForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\EditScheduleForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\ImportChangesForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\ReportAmenitiesForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\SurveyResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Database\Aircrafts.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Airports.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Amenities.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\AmenitiesTickets.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CabinTypes.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Countries.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Offices.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Roles.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Routes.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Schedules.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Survey.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Survey.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Survey.cs">
+      <DependentUpon>Survey.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Survey.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Survey.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Survey1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Survey.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Tickets.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Tracking.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Users.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AmentitiesForm.xaml.cs">
+      <DependentUpon>AmentitiesForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BookTicketsForm.xaml.cs">
+      <DependentUpon>BookTicketsForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChangeRoleForm.xaml.cs">
+      <DependentUpon>ChangeRoleForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ConfirmBooking.xaml.cs">
+      <DependentUpon>ConfirmBooking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CrasheReportForm.xaml.cs">
+      <DependentUpon>CrasheReportForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditScheduleForm.xaml.cs">
+      <DependentUpon>EditScheduleForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ImportChangesForm.xaml.cs">
+      <DependentUpon>ImportChangesForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportAmenitiesForm.xaml.cs">
+      <DependentUpon>ReportAmenitiesForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SurveyResult.xaml.cs">
+      <DependentUpon>SurveyResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\DataHelper.cs" />
+    <Compile Include="Helper\ImportChangesHelper.cs" />
+    <Compile Include="Helper\ImportResultHelper.cs" />
+    <Compile Include="Helper\SurveyHelper.cs" />
+    <Compile Include="Helper\SurveyResult.cs" />
+    <Compile Include="Helper\TrackingHelper.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Forms\AddUserForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AdministratorPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AuthPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\BookFlightPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ManageSchedulesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SurveyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\UserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\AddUserForm.xaml.cs">
+      <DependentUpon>AddUserForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdministratorPage.xaml.cs">
+      <DependentUpon>AdministratorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AuthPage.xaml.cs">
+      <DependentUpon>AuthPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BookFlightPage.xaml.cs">
+      <DependentUpon>BookFlightPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ManageSchedulesPage.xaml.cs">
+      <DependentUpon>ManageSchedulesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SurveyPage.xaml.cs">
+      <DependentUpon>SurveyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserPage.xaml.cs">
+      <DependentUpon>UserPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="Fonts\TCBI____.TTF" />
+    <Resource Include="Fonts\TCB_____.TTF" />
+    <Resource Include="Fonts\TCCB____.TTF" />
+    <Resource Include="Fonts\TCCEB.TTF" />
+    <Resource Include="Fonts\TCCM____.TTF" />
+    <Resource Include="Fonts\TCMI____.TTF" />
+    <Resource Include="Fonts\TCM_____.TTF" />
+    <Resource Include="Fonts\TeXGyreAdventor-Bold.ttf" />
+    <Resource Include="Fonts\TeXGyreAdventor-BoldItalic.ttf" />
+    <Resource Include="Fonts\TeXGyreAdventor-Italic.ttf" />
+    <Resource Include="Fonts\TeXGyreAdventor-Regular.ttf" />
+    <Resource Include="Fonts\verdana.ttf" />
+    <Resource Include="Fonts\verdanab.ttf" />
+    <Resource Include="Fonts\verdanai.ttf" />
+    <Resource Include="Fonts\verdanaz.ttf" />
+    <EntityDeploy Include="Database\Survey.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Survey.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="bin\Debug\DigitalSkills2017.exe.config" />
+    <EntityDeploy Include="Database\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Database\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="Database\Survey.edmx.diagram">
+      <DependentUpon>Survey.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\DigitalSkills2017.exe" />
+    <Content Include="bin\Debug\DigitalSkills2017.pdb" />
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
+    <Resource Include="bin\Debug\EntityFramework.SqlServer.xml" />
+    <Resource Include="bin\Debug\EntityFramework.xml" />
+    <Content Include="bin\Debug\ru\EntityFramework.resources.dll" />
+    <Content Include="Database\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database\Survey.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Survey.edmx</DependentUpon>
+      <LastGenOutput>Survey.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database\Survey.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Survey.edmx</DependentUpon>
+      <LastGenOutput>Survey1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\DS2017_TP09_2_colors%404x.png" />
+    <Resource Include="Images\DS2017_TP09_2_colors.png" />
+    <Resource Include="Images\DS2017_TP09_2_colors_%402x.png" />
+    <Resource Include="Images\DS2017_TP09_2_colors_swatches%404x1.png" />
+    <Resource Include="Images\DS2017_TP09_2_colors_with_bg%402x.png" />
+    <Resource Include="Images\DS2017_TP09_2_colors_with_bg%404x.png" />
+    <Resource Include="Images\DS2017_TP09_2_colors_with_bg.png" />
+    <Resource Include="Images\DS2017_TP09_Airplane-Amonic-Single.png" />
+    <Resource Include="Images\DS2017_TP09_Airplane-Amonic.png" />
+    <Resource Include="Images\DS2017_TP09_black%402x.png" />
+    <Resource Include="Images\DS2017_TP09_black%404x.png" />
+    <Resource Include="Images\DS2017_TP09_black.png" />
+    <Resource Include="Images\DS2017_TP09_color%402x.png" />
+    <Resource Include="Images\DS2017_TP09_color%404x.png" />
+    <Resource Include="Images\DS2017_TP09_color.png" />
+    <Resource Include="Images\DS2017_TP09_color_swatches%404x1.png" />
+    <Resource Include="Images\DS2017_TP09_color_swatches.jpg" />
+    <Resource Include="Images\DS2017_TP09_mono%402x.png" />
+    <Resource Include="Images\DS2017_TP09_mono%404x.png" />
+    <Resource Include="Images\DS2017_TP09_mono.png" />
+    <Resource Include="Images\DS2017_TP09_mono_swatches%404x1.png" />
+    <Resource Include="Images\white%402x.png" />
+    <Resource Include="Images\white%404x.png" />
+    <Resource Include="Images\white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
