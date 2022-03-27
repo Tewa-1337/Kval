@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0bcb50ea1be94db68af5602d68947f29" Name="Diagram1" ZoomLevel="83">
+        <EntityTypeShape EntityType="airModel.Aircrafts" Width="1.5" PointX="12" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="airModel.Airports" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="airModel.Amenities" Width="1.5" PointX="10" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="airModel.AmenitiesTickets" Width="1.5" PointX="12" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="airModel.CabinTypes" Width="1.5" PointX="0.625" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="airModel.Countries" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="airModel.Offices" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="airModel.Roles" Width="1.5" PointX="0.625" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="airModel.Routes" Width="1.5" PointX="5.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="airModel.Schedules" Width="1.5" PointX="7.5" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="airModel.Tickets" Width="1.5" PointX="9.625" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="airModel.Tracking" Width="1.5" PointX="7.375" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="airModel.Users" Width="1.5" PointX="5.125" PointY="7.125" IsExpanded="true" />
+        <AssociationConnector Association="airModel.FK_Schedule_AirCraft" ManuallyRouted="false" />
+        <AssociationConnector Association="airModel.FK_AirPort_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="airModel.FK_Routes_Airports2" ManuallyRouted="false" />
+        <AssociationConnector Association="airModel.FK_Routes_Airports3" ManuallyRouted="false" />
+        <AssociationConnector Association="airModel.FK_AmenitiesTickets_Amenities" ManuallyRouted="false" />
+        <AssociationConnector Association="airModel.FK_AmenitiesTickets_Tickets" ManuallyRouted="false" />
+        <AssociationConnector Association="airModel.FK_Ticket_TravelClass" ManuallyRouted="false" />
+        <AssociationConnector Association="airModel.FK_Office_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="airModel.FK_UserData_Offices" ManuallyRouted="false" />
+        <AssociationConnector Association="airModel.FK_Users_Offices" ManuallyRouted="false" />
+        <AssociationConnector Association="airModel.FK_UserData_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="airModel.FK_Users_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="airModel.FK_Schedule_Routes" ManuallyRouted="false" />
+        <AssociationConnector Association="airModel.FK_Ticket_Schedule" ManuallyRouted="false" />
+        <AssociationConnector Association="airModel.FK_Ticket_User" ManuallyRouted="false" />
+        <AssociationConnector Association="airModel.FK_Tracking_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="airModel.AmenitiesCabinType" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
