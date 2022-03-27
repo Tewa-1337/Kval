@@ -1,0 +1,19 @@
+﻿<Window x:Class="DigitalSkills2017.Forms.ConfirmBooking"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DigitalSkills2017.Forms"
+        mc:Ignorable="d"
+        Title="ConfirmBooking" Height="250" Width="400">
+    <Grid>
+        <Label Name="AmountLabel" Content="Total amount: " Margin="25,25,9.6,0" VerticalAlignment="Top"/>
+        <Label Content="Paid using: " Margin="25,60,9.6,0" VerticalAlignment="Top"/>
+        <RadioButton Name="Credit" Content="Credit card" Margin="70,90,33.6,0" VerticalAlignment="Top"/>
+        <RadioButton Name="Cash" Content="Cash" Margin="70,110,156.6,0" VerticalAlignment="Top"/>
+        <RadioButton Name="Voucher" Content="Voucher" Margin="70,130,93.6,0" VerticalAlignment="Top"/>
+
+        <Button Name="IssueButton" Content="Issue tickets" Margin="50,160,220,0" Height="25" VerticalAlignment="Top" Click="IssueButton_Click"/>
+        <Button Name="CancelButton" Content="Cancel" Margin="220,160,50,0" Height="25" VerticalAlignment="Top" Background="Red" Foreground="White" Click="CancelButton_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,20 @@
+﻿<Window x:Class="DigitalSkills2017.Forms.ReportAmenitiesForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DigitalSkills2017.Forms"
+        mc:Ignorable="d"
+        Title="ReportAmenitiesForm" Height="307.2" Width="800">
+    <Grid>
+        <DataGrid x:Name="AmenitiesData" Margin="20,100,20,20">
+            <DataGrid.Columns >
+                <DataGridTextColumn Header="Amenities" Width="auto"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="FlightText" HorizontalAlignment="Left" Height="29" Margin="89,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" PreviewTextInput="FlightText_PreviewTextInput"/>
+        <Button x:Name="MakeReportButton" Content="MakeReport" HorizontalAlignment="Left" Margin="300,10,0,0" VerticalAlignment="Top" Width="94" Height="29" Click="MakeReportButton_Click"/>
+        <Label Content="Flight ID:" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Height="29" Width="64"/>
+
+    </Grid>
+</Window>

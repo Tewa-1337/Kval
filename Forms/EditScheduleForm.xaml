@@ -1,0 +1,33 @@
+﻿<Window x:Class="DigitalSkills2017.Forms.EditScheduleForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DigitalSkills2017.Forms"
+        mc:Ignorable="d"
+        Title="EditScheduleForm" Height="250" Width="550" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Flight route" Margin="20,0,0,0" Width="100" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Grid Grid.Row="0" Margin="20">
+            <Border BorderBrush="Gray" BorderThickness="1"/>
+            <Label x:Name="FromLabel" Content="From: " Margin="10,22,430,22.4"/>
+            <Label x:Name="ToLabel" Content="To:" Margin="170,22,300,22.4"/>
+            <Label Content="Aircraft: " Margin="352,22,88,22.4"/>
+            <Label x:Name="ToLabel_Copy" Content="{Binding Routes.Airports1.IATACode}" FontWeight="Bold" Margin="200,22,157,22.4"/>
+            <Label x:Name="FromLabel_Copy" Content="{Binding Routes.Airports.IATACode}" FontWeight="Bold" Margin="50,22,330,22.4"/>
+            <Label Content="{Binding Aircrafts.Name}" Margin="400,22,10,10"/>
+        </Grid>
+        <DatePicker x:Name="ScheduleDatePicker" Grid.Row="1" SelectedDate="{Binding Date}" Margin="65,30.6,372,53"/>
+        <Label Content="Date: " Grid.Row="1" Margin="20,30.6,0,53" HorizontalAlignment="Left" Width="40"/>
+        <TextBox x:Name="TimeText" Text="{Binding Time}" Grid.Row="1" TextWrapping="Wrap" Margin="217,30.6,240,53" PreviewTextInput="TimeText_PreviewTextInput" VerticalContentAlignment="Center"/>
+        <Label Content="Time" Grid.Row="1" Margin="172,30.6,0,53" HorizontalAlignment="Left" Width="40" RenderTransformOrigin="0.45,0.472"/>
+        <TextBox Grid.Row="1" TextWrapping="Wrap" Text="{Binding EconomyPrice}" Margin="423,30.6,12,53"/>
+        <Label Content="Economy price" Grid.Row="1" Margin="309,30,120,43"/>
+        <Button x:Name="UpdateButton" Content="Update" Margin="0,0,9.6,9" Grid.Row="1" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="84" Click="UpdateButton_Click"/>
+        <Button x:Name="CancelButton" Content="Cancel" Margin="0,0,109.6,9" Grid.Row="1" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="84" Background="Red" Foreground="White" Click="CancelButton_Click"/>
+    </Grid>
+</Window>

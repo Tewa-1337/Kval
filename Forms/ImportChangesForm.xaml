@@ -1,0 +1,38 @@
+﻿<Window x:Class="DigitalSkills2017.Forms.ImportChangesForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DigitalSkills2017.Forms"
+        mc:Ignorable="d"
+        Title="ImportChangesForm" Height="300" Width="600"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Content="Please select the text file with the changes:" Margin="10" Height="30" VerticalAlignment="Top"/>
+        <TextBox Grid.Row="0" Margin="40,40,200,0" Height="30" VerticalAlignment="Top"/>
+        <Button x:Name="ImportChangesButton" Grid.Row="0" Margin="420,40,70,0" Content="Import changes" Height="30" VerticalAlignment="Top" Click="ImportChangesButton_Click"/>
+        <Border BorderBrush="Gray" Grid.Row="1" Margin="20" BorderThickness="1"/>
+        <Grid Margin="20" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="Successful Changes Applied:" HorizontalAlignment="Left" Margin="10" Height="30" VerticalAlignment="Center" />
+            <Label Grid.Row="1" Grid.Column="0" Content="Duplicate Records Discarded:" HorizontalAlignment="Left" Margin="10" Height="30" VerticalAlignment="Center" />
+            <Label Grid.Row="2" Grid.Column="0" Content="Record with missing fields discarded:" HorizontalAlignment="Left" Margin="10" Height="30" VerticalAlignment="Center" />
+
+            <Label Name="SuccessfulLabel" Grid.Row="0" Grid.Column="1" Content="" HorizontalAlignment="Left" Margin="10" Height="30" VerticalAlignment="Center" />
+            <Label Name="DublicateLabel" Grid.Row="1" Grid.Column="1" Content="" HorizontalAlignment="Left" Margin="10" Height="30" VerticalAlignment="Center" />
+            <Label Name="RecordLabel" Grid.Row="2" Grid.Column="1" Content="" HorizontalAlignment="Left" Margin="10" Height="30" VerticalAlignment="Center" />
+        </Grid>
+    </Grid>
+</Window>

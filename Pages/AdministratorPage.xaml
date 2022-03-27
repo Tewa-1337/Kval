@@ -1,0 +1,55 @@
+﻿<Page x:Class="DigitalSkills2017.Pages.AdministratorPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DigitalSkills2017.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AdministratorPage">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Menu FontSize="14" Height="20" VerticalAlignment="Top">
+            <MenuItem Name="AddUserItem" Header="Add User" Click="AddUserItem_Click">
+            </MenuItem>
+            <MenuItem Name="ExitItem" Header="Exit" Click="ExitItem_Click"/>
+        </Menu>
+
+        <Image Height="92" Stretch="Uniform" Source="/DigitalSkills2017;component/Images/DS2017_TP09_black.png" VerticalAlignment="Top" Margin="180,20,180,0"/>
+        <DataGrid AutoGenerateColumns="False" x:Name="UsersData" Margin="10,10.4,10,9.6" Grid.Row="1">
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding RoleID}" Value="1">
+                            <Setter Property="Background" Value="GreenYellow"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Active}" Value="false">
+                            <Setter Property="Background" Value="red"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="*" Header="Name" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn Width="*" Header="LastName" Binding="{Binding LastName}"/>
+                <DataGridTextColumn Width="*" Header="Age" Binding="{Binding Age}"/>
+                <DataGridTextColumn Width="*" Header="User Role" Binding="{Binding Roles.Title}"/>
+                <DataGridTextColumn Width="*" Header="Email Address" Binding="{Binding Email}"/>
+                <DataGridTextColumn Width="*" Header="Office" Binding="{Binding Offices.Title}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Office:" FontSize="14" HorizontalAlignment="Left" Margin="10,0,0,6.4" Height="26" VerticalAlignment="Bottom"/>
+        <ComboBox x:Name="OfficeComboBox" DisplayMemberPath="Title" HorizontalAlignment="Left" Margin="79,0,0,6.4" Width="162" Height="22" VerticalAlignment="Bottom" SelectionChanged="OfficeComboBox_SelectionChanged" PreviewMouseLeftButtonDown="OfficeComboBox_PreviewMouseLeftButtonDown"/>
+        <Button x:Name="ChangeRoleButton" Content="Change Role" HorizontalAlignment="Left" Margin="10,0,0,9.6" Grid.Row="2" Width="103" Height="30" VerticalAlignment="Bottom" Click="ChangeRoleButton_Click"/>
+        <Button x:Name="EnableDisableButton" Content="Enable/Disable Login" HorizontalAlignment="Left" Margin="128,0,0,9.6" Grid.Row="2" Width="137" Height="30" VerticalAlignment="Bottom" Click="EnableDisableButton_Click"/>
+        <Button x:Name="SchedulesButton" Content="Schedules" Margin="680,25,10,0" Height="24" VerticalAlignment="Top" Click="SchedulesButton_Click"/>
+        <Button x:Name="BookFlightButton" Content="Book Flight" Margin="680,54,10,0" VerticalAlignment="Top" Height="24" Click="BookFlightButton_Click"/>
+        <Button x:Name="SurveyButton" Content="Survey" Margin="680,83,10,0" VerticalAlignment="Top" Height="24" Click="SurveyButton_Click"/>
+    </Grid>
+</Page>

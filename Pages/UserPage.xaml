@@ -1,0 +1,49 @@
+﻿<Page x:Class="DigitalSkills2017.Pages.UserPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DigitalSkills2017.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserPage" IsVisibleChanged="Page_IsVisibleChanged">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Menu FontSize="14" Height="20" VerticalAlignment="Top">
+            <MenuItem Name="ExitItem" Header="Exit" Click="ExitItem_Click"/>
+        </Menu>
+        <Image Stretch="Uniform" Source="/DigitalSkills2017;component/Images/DS2017_TP09_black.png" Margin="180,20,180,38.4"/>
+
+
+        <DataGrid x:Name="TrackingData" IsReadOnly="True" AutoGenerateColumns="False" Grid.Row="1" FontSize="14" Margin="10">
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Crashe}" Value="true">
+                            <Setter Property="Background" Value="Red"/>
+                            <Setter Property="Foreground" Value="White"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Date}" Header="Date" Width="*" />
+                <DataGridTextColumn Binding="{Binding LoginTimeStr}" Header="Login time" Width="*" />
+                <DataGridTextColumn Binding="{Binding LogoutTimeStr}" Header="Logout time" Width="*" />
+                <DataGridTextColumn Binding="{Binding TimeSpent}" Header="Time spent on system" Width="*" />
+                <DataGridTextColumn Binding="{Binding CrasheReason}" Header="Crash reason" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label x:Name="WelcomeLabel" Content="Hi user, welcome to AMONIC Airlines" Margin="10,0,436,9.4" VerticalAlignment="Bottom"/>
+        <Label x:Name="TimeSpentLabel" Content="Time spent on system:" Margin="369,0,180,10.4" VerticalAlignment="Bottom"/>
+        <Label x:Name="CrashesNumberLabel" Content="Number of crashes:" Margin="643,0,10,9.4" VerticalAlignment="Bottom"/>
+        <Button x:Name="Amentities" Content="Amentities" Margin="0,25,10,0" Height="24" VerticalAlignment="Top" HorizontalAlignment="Right" Width="117" Click="Amentities_Click"/>
+        <Button x:Name="ReportAmentities" Content="Report Amentities" Margin="0,54,10,0" Height="24" VerticalAlignment="Top" HorizontalAlignment="Right" Width="117" Click="ReportAmentities_Click"/>
+    </Grid>
+</Page>
